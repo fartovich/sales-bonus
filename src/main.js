@@ -31,6 +31,7 @@ function calculateBonusByProfit(index, total, seller) {
  */
 function analyzeSalesData(data, options) {
     // @TODO: Проверка входных данных
+    const { calculateRevenue, calculateBonus } = options; // Сюда передадим функции для расчётов
 
     // @TODO: Проверка наличия опций
 
