@@ -41,6 +41,27 @@ function analyzeSalesData(data, options) {
     }
 
     // @TODO: Проверка наличия опций
+    if (!options || typeof options !== 'object') {
+        throw new Error('Не переданы опции');
+    }
+
+    const { calculateRevenue, calculateBonus } = options;
+
+    if (typeof calculateRevenue !== 'function'
+        || typeof calculateBonus !== 'function'
+    ) {
+        throw new Error('Не переданы функции для расчётов');
+    }
+
+    // @TODO: Подготовка промежуточных данных для сбора статистики
+    const sellerStats = data.sellers.map(seller => ({
+        id: seller.id,
+        name: `${seller.first_name} ${seller.last_name}`,
+        revenue: 0,
+        profit: 0,
+        sales_count: 0,
+        products_sold: {}
+    }));
 
     // @TODO: Подготовка промежуточных данных для сбора статистики
 
