@@ -1,4 +1,4 @@
-https://github.com/fartovich/sales-bonus.git https://fartovich.github.io/sales-bonus/
+https://github.com/fartovich/sales-bonus.git
 
 # Проектная работа "Пряники"
 5 спринт, модуль JS
